@@ -1,0 +1,76 @@
+.temperature-container {
+  width: 90%;
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 40px;
+  border: 1px solid black;
+  border-radius: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  margin-bottom: 25px;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+input,
+select,
+button {
+  padding: 12px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* BOX TEMPERATURA */
+input {
+  width: 90px;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+
+/* SELECT UNITÀ */
+select {
+  width: 145px;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+
+/* PULSANTE CONVERT */
+button {
+  width: 120px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* HOVER DEL PULSANTE */
+button:hover:not(:disabled) {
+  background-color: green;
+}
+
+/* PULSANTE DISABILITATO */
+button:disabled {
+  background-color: lightgray;
+  color: gray;
+  cursor: not-allowed;
+}
+
+/* RISULTATO */
+.result {
+  margin-top: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  color: green;
+}
