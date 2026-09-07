@@ -1,0 +1,36 @@
+<div class="temperature-container">
+  <h1>Temperature Converter</h1>
+
+  <p class="subtitle">Enter the temperature, select units and submit.</p>
+
+  <div class="form-row">
+    <!-- TEMPERATURA -->
+    <input id="temperature" type="number" placeholder="0.00" (input)="updateTemperature($event)" />
+
+    <!-- UNITÀ DI PARTENZA -->
+    <select id="fromUnit" (change)="updateFromUnit($event)">
+      <option value="">From Unit</option>
+      <option value="fahrenheit">Fahrenheit</option>
+      <option value="celsius">Celsius</option>
+      <option value="kelvin">Kelvin</option>
+    </select>
+
+    <!-- UNITÀ DI ARRIVO -->
+    <select id="toUnit" (change)="updateToUnit($event)">
+      <option value="">To Unit</option>
+      <option value="fahrenheit">Fahrenheit</option>
+      <option value="celsius">Celsius</option>
+      <option value="kelvin">Kelvin</option>
+    </select>
+
+    <!-- PULSANTE CONVERT -->
+    <button type="button" [disabled]="!canConvert()" (click)="convertTemperature()">Convert</button>
+  </div>
+
+  <!-- RISULTATO -->
+  @if (result() !== null) {
+    <p class="result">
+      {{ temperature() }} {{ fromUnit() }} is {{ result()!.toFixed(2) }} {{ toUnit() }}
+    </p>
+  }
+</div>
